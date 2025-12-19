@@ -16,31 +16,20 @@ io.on("connection", onConnected);
 let socketConnected = new Set();
 
 function onConnected(socket) {
-  console.log(socket.id);
-  console.log(`socket connected : ${socket.id}`);
   socketConnected.add(socket.id);
-
   io.emit("client total", socketConnected.size);
-  socket.on("disconnected", (socket) => {
-    console.log(`socket disconnected : ${socket.id}`);
 
+  socket.on("disconnect", () => {
     socketConnected.delete(socket.id);
     io.emit("client total", socketConnected.size);
   });
 
   socket.on("message", (data) => {
-    console.log(`this is from server side: ${data.message}`);
-    addMessageToUI()
+    socket.broadcast.emit("chat-message", data);
   });
-  function addMessageToUI(isOwnMessage, data) {
-    const element = `
-        <li class="${isOwnMessage ? "message-right" : "message-left"}">
-                    <p class="message">${data.message}</p>
-                    <span>${data.name} . ${data.dateTime}</span>
-                </li>  
 
-    `
 
-    messageContainer.innerHTML +=element
-  }
+  socket.on("feedback", (data)=>{
+    socket.broadcast.emit("feedback", data)
+  })
 }

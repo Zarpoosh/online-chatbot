@@ -64,7 +64,7 @@ chat-application/
    ```bash
    git clone https://github.com/Zarpoosh/online-chatbot.git
    cd online-chatbot
-````
+
 
 2. **Install dependencies**
 
@@ -190,4 +190,4 @@ This project was developed for educational purposes. Free use with attribution i
 
 ```
 
-```
+````

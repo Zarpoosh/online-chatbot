@@ -46,7 +46,7 @@ chat-application/
 ├── package.json # Dependencies
 └── README.md # This file
 
-```
+````
 
 ---
 

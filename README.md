@@ -31,7 +31,7 @@ A real-time chat application built with **Node.js, Express, Socket.IO**, and van
 
 ## 📁 Project Structure
 
-```
+```‍‍‍‍‍‍‍`
 
 chat-application/
 │

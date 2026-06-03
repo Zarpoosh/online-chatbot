@@ -1,11 +1,11 @@
 ```markdown
-# 💬 Real-Time Chat Application
+#💬 Real-Time Chat Application
 
 A real-time chat application built with **Node.js, Express, Socket.IO**, and vanilla **HTML/CSS/JavaScript** on the client side. Users can join with a custom name, send text messages, see when others are typing, and view the total number of online users.
 
 ---
 
-## ✨ Features
+##✨ Features
 
 - 📡 **Real-time messaging** – no page refresh required
 - 👤 **Custom username** (default: anonymous)
@@ -18,7 +18,7 @@ A real-time chat application built with **Node.js, Express, Socket.IO**, and van
 
 ---
 
-## 🛠️ Technologies Used
+##🛠️ Technologies Used
 
 | Area         | Technologies                                                          |
 | ------------ | --------------------------------------------------------------------- |
@@ -29,7 +29,7 @@ A real-time chat application built with **Node.js, Express, Socket.IO**, and van
 
 ---
 
-## 📁 Project Structure
+##📁 Project Structure
 ```
 
 chat-application/

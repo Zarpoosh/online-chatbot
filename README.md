@@ -4,6 +4,9 @@
 A real-time chat application built with **Node.js, Express, Socket.IO**, and vanilla **HTML/CSS/JavaScript** on the client side. Users can join with a custom name, send text messages, see when others are typing, and view the total number of online users.
 
 ---
+<img width="1864" height="961" alt="Screenshot from 2026-06-03 21-43-38" src="https://github.com/user-attachments/assets/337f26c3-bd91-4d94-96af-2b5ef021c246" />
+
+---
 
 ## ✨ Features
 

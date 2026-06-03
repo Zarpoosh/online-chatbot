@@ -67,24 +67,26 @@ chat-application/
    npm install express socket.io moment
    ```
 
-**Or if you have a package.json:**
+    **Or if you have a package.json:**
 
-````bash
+    ````bash
    npm install
+   ```
 
 3. **Start the server**
    ```bash
    node server.js
+   ```
 
 4. **Open in your browser**
    Go to:
 
    ```bash
    http://localhost:4000
+    ```
 
 
-
-       To test multiple users, open several tabs or different browsers.
+    To test multiple users, open several tabs or different browsers.
 
    💡 The default port is 4000. You can change it by setting the PORT environment variable.
 ````

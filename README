@@ -1,0 +1,90 @@
+# 💬 Real-Time Chat Application
+
+A real-time chat application built with **Node.js, Express, Socket.IO**, and vanilla **HTML/CSS/JavaScript** on the client side. Users can join with a custom name, send text messages, see when others are typing, and view the total number of online users.
+
+---
+
+## ✨ Features
+
+- 📡 **Real-time messaging** – no page refresh required
+- 👤 **Custom username** (default: anonymous)
+- 🟢 **Live online user counter**
+- ⌨️ **"Someone is typing..." indicator** while others are writing
+- 🔊 **Sound notification** for incoming messages
+- 📅 **Relative timestamps** (e.g., "2 minutes ago") using Moment.js
+- 📱 **Fully responsive design** – works on mobile & desktop
+- 🎨 **Visual distinction** between sent and received messages (left/right alignment)
+
+---
+
+## 🛠️ Technologies Used
+
+| Area         | Technologies                                                          |
+| ------------ | --------------------------------------------------------------------- |
+| Backend      | Node.js, Express.js, Socket.IO                                        |
+| Frontend     | HTML5, CSS3, Vanilla JavaScript                                       |
+| Libraries    | Socket.IO Client, Moment.js, Font Awesome 7, Google Fonts (Open Sans) |
+| Architecture | Modular (EventEmitter ready for logging extensions)                   |
+
+---
+
+## 📁 Project Structure
+
+chat-application/
+│
+├── public/ # Client-side files
+│ ├── index.html # Main chat page
+│ ├── main.css # Styles
+│ ├── main2.js # Client logic (socket connection)
+│ └── voice.mp3 # Notification sound
+│
+├── server.js # Express + Socket.IO server
+├── logger.js # Logging module with EventEmitter
+├── package.json # Dependencies
+└── README.md # This file
+
+---
+
+## 🚀 How to Run the Project
+
+### Prerequisites
+
+- [Node.js](https://nodejs.org/) version 14 or higher
+- npm (comes with Node.js)
+
+### Steps
+
+1. **Clone the repository** (or download the files)
+
+   ```bash
+   git clone https://github.com/Zarpoosh/online-chatbot.git
+   cd online-chatbot
+
+   ```
+
+2. **Install dependencies**
+   ```bash
+   npm install express socket.io moment
+   ```
+
+**Or if you have a package.json:**
+
+````bash
+   npm install
+
+3. **Start the server**
+   ```bash
+   node server.js
+
+4. **Open in your browser**
+   Go to:
+
+   ```bash
+   http://localhost:4000
+
+
+
+       To test multiple users, open several tabs or different browsers.
+
+   💡 The default port is 4000. You can change it by setting the PORT environment variable.
+````

@@ -49,7 +49,9 @@ chat-application/
 ````
 
 ---
-<img width="1864" height="961" alt="Screenshot from 2026-06-03 21-43-38" src="https://github.com/user-attachments/assets/337f26c3-bd91-4d94-96af-2b5ef021c246" />
+
+
+<img width="1874" height="966" alt="Screenshot from 2026-06-04 21-34-28" src="https://github.com/user-attachments/assets/3250715d-37db-44aa-acf2-bf0c96a7e858" />
 
 
 ## 🚀 How to Run the Project

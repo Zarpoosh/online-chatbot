@@ -16,7 +16,6 @@ body {
     padding: 20px;
 }
 
-/* عنوان اصلی */
 .titl {
     margin: 0 0 20px 0;
     font-size: 2rem;
@@ -26,7 +25,7 @@ body {
     letter-spacing: 1px;
 }
 
-/* باکس اصلی چت */
+/* chat box*/
 .main {
     width: 100%;
     max-width: 800px;
@@ -41,7 +40,7 @@ body {
     transform: translateY(-5px);
 }
 
-/* بخش نام کاربری */
+/* user name*/
 .name {
     display: flex;
     align-items: center;
@@ -78,7 +77,7 @@ body {
     box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.3);
 }
 
-/* کانتینر پیام‌ها */
+/* MESSAGE CONTAINER*/
 .message-container {
     height: 450px;
     overflow-y: auto;
@@ -90,7 +89,7 @@ body {
     gap: 12px;
 }
 
-/* استایل اسکرول بار */
+/*scroll bar*/
 .message-container::-webkit-scrollbar {
     width: 6px;
 }
@@ -109,7 +108,7 @@ body {
     background: #718096;
 }
 
-/* پیام چپ (دیگران) */
+/* message in keft side*/
 .message-left {
     list-style: none;
     align-self: flex-start;
@@ -136,7 +135,7 @@ body {
     font-style: italic;
 }
 
-/* پیام راست (خودم) */
+/* message in right side*/
 .message-right {
     list-style: none;
     align-self: flex-end;
@@ -164,7 +163,7 @@ body {
     text-align: right;
 }
 
-/* بازخورد تایپ کردن */
+/* is typinf*/
 .message-feedback {
     list-style: none;
     text-align: center;
@@ -181,7 +180,7 @@ body {
     border-radius: 20px;
 }
 
-/* فرم ارسال پیام */
+/* send message*/
 .message-form {
     display: flex;
     align-items: center;
@@ -263,7 +262,7 @@ body {
 }
 
 /* ======================================== */
-/* RESPONSIVE DESIGN (ریسپانسیو برای موبایل) */
+/* RESPONSIVE DESIGN */
 /* ======================================== */
 
 @media (max-width: 768px) {

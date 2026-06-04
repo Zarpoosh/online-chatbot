@@ -1,143 +1,357 @@
-
-*{
-    
-    margin: 0 ;
+* {
+    margin: 0;
     padding: 0;
     box-sizing: border-box;
     scroll-behavior: smooth;
 }
-body{
-font-family: "Open Sans", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: weight;
-  font-style: normal;
-  font-variation-settings:
-    "wdth" 100;
 
-
+body {
+    font-family: "Open Sans", sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color:#bbbb;
+    padding: 20px;
 }
 
-.titl{
-    margin: 20px 0;
-    font-size: 24px;
+/* عنوان اصلی */
+.titl {
+    margin: 0 0 20px 0;
+    font-size: 2rem;
+    font-weight: 700;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+    letter-spacing: 1px;
 }
-.main{
-    border: 8px solid #dddd;
+
+/* باکس اصلی چت */
+.main {
+    width: 100%;
+    max-width: 800px;
+    background: white;
+    border-radius: 24px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.3);
     overflow: hidden;
-
+    transition: transform 0.3s ease;
 }
 
-.name{
+.main:hover {
+    transform: translateY(-5px);
+}
+
+/* بخش نام کاربری */
+.name {
     display: flex;
-    font-size: 32px;
-    font-weight: 700px;
-    padding: 8px 16px ;
-    color: #7e7e7e;
-    background-color: #ebebeb;
+    align-items: center;
+    gap: 12px;
+    padding: 16px 24px;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    border-bottom: 1px solid rgba(0,0,0,0.1);
 }
 
-.name>input{
-    color: #bbbb;
+.name i {
     font-size: 24px;
-    color: #7e7e7e;
-    flex-grow: 1;
-    border: none;
-    margin: 0px 12px;
-    outline: none;
-    background-color: #ebebeb;
+    color: #4a5568;
+    background: white;
+    padding: 8px;
+    border-radius: 50%;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
+.name input {
+    flex: 1;
+    border: none;
+    background: white;
+    padding: 12px 16px;
+    font-size: 16px;
+    border-radius: 40px;
+    outline: none;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    color: #2d3748;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
 
-.message-container{
+.name input:focus {
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.3);
+}
+
+/* کانتینر پیام‌ها */
+.message-container {
+    height: 450px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 20px;
+    background: #f8f9fa;
     display: flex;
     flex-direction: column;
-    background-color: #f6f6f6;
-    width: 400px;
-    height: 600px;
-    overflow-y: scroll;
-    overflow-x:hidden ;
-
+    gap: 12px;
 }
 
+/* استایل اسکرول بار */
+.message-container::-webkit-scrollbar {
+    width: 6px;
+}
 
-.message-left , .message-right{
-    list-style:none;
-    padding: 8px 12px;
-    margin: 12px;
-    max-width: 250px;
-    font-size: 18px;
+.message-container::-webkit-scrollbar-track {
+    background: #e2e8f0;
+    border-radius: 10px;
+}
+
+.message-container::-webkit-scrollbar-thumb {
+    background: #a0aec0;
+    border-radius: 10px;
+}
+
+.message-container::-webkit-scrollbar-thumb:hover {
+    background: #718096;
+}
+
+/* پیام چپ (دیگران) */
+.message-left {
+    list-style: none;
+    align-self: flex-start;
+    max-width: 70%;
+    background: white;
+    padding: 12px 16px;
+    border-radius: 20px 20px 20px 4px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    animation: fadeIn 0.3s ease;
+}
+
+.message-left .message {
+    font-size: 15px;
+    color: #2d3748;
+    line-height: 1.4;
     word-wrap: break-word;
 }
-.message-left{
-    border-radius: 20px 20px 20px 0px;
-    background-color: #fff;
-    box-shadow: -2px 2px 2px 4px #dcdcdc;
-    align-self: flex-start;
-}
 
-.message-right{
-    border-radius: 20px 20px 0px 20px;
-    background-color: #575757;
-    box-shadow: -2px 2px 2px 4px #dcdcdc;
-    align-self: flex-end;
-    color: #f6f6f6;
-
-}
-
-.message-left>span ,.message-right>span{
+.message-left span {
     display: block;
+    font-size: 10px;
+    color: #a0aec0;
+    margin-top: 6px;
     font-style: italic;
-    font-size: 12px;
-    margin-top: 4px;
 }
 
-.feedback{
+/* پیام راست (خودم) */
+.message-right {
+    list-style: none;
+    align-self: flex-end;
+    max-width: 70%;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 12px 16px;
+    border-radius: 20px 20px 4px 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    animation: fadeIn 0.3s ease;
+}
+
+.message-right .message {
+    font-size: 15px;
+    color: white;
+    line-height: 1.4;
+    word-wrap: break-word;
+}
+
+.message-right span {
+    display: block;
+    font-size: 10px;
+    color: rgba(255,255,255,0.7);
+    margin-top: 6px;
     font-style: italic;
-    font-size: 14px;
-    padding: 0px 16px 16px 16px ;
-    color: #2d2d2d;
+    text-align: right;
+}
+
+/* بازخورد تایپ کردن */
+.message-feedback {
+    list-style: none;
     text-align: center;
+    margin-top: 8px;
 }
 
-.message-form{
+.feedback {
+    font-size: 12px;
+    color: #718096;
+    font-style: italic;
+    padding: 8px 16px;
+    background: #edf2f7;
+    display: inline-block;
+    border-radius: 20px;
+}
+
+/* فرم ارسال پیام */
+.message-form {
     display: flex;
-    justify-content: space-between;
-    width: 400px;
+    align-items: center;
+    background: white;
+    border-top: 1px solid #e2e8f0;
+    padding: 12px 20px;
+    gap: 12px;
 }
 
-.message-input{
-    flex-grow: 1;
-    height: 48px;
-    font-size: 16px;
-    border: none;
+.message-input {
+    flex: 1;
+    border: 1px solid #e2e8f0;
+    border-radius: 40px;
+    padding: 12px 18px;
+    font-size: 14px;
     outline: none;
-    padding: 0px 12px ;
-    background-color: #fff;
-
+    transition: all 0.3s ease;
+    font-family: inherit;
 }
 
-.send-btn{
-    height: 48px;
-    font-size: 16px;
+.message-input:focus {
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.2);
+}
+
+.v-divider {
+    width: 1px;
+    height: 30px;
+    background: #e2e8f0;
+}
+
+.send-btn {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     border: none;
-    outline: none;
-    padding: 0px 20px;
-    background-color: #fff;
+    border-radius: 40px;
+    padding: 10px 24px;
+    color: white;
+    font-weight: 600;
     cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
 }
 
-.v-divider{
-    height: 48px;
-    width: 2px;
-    background-color: #f6f6f6;
-}
-.client-total{
-    margin: 20px 0px ;
-    color: #7e7e7e;
+.send-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
 }
 
+.send-btn i {
+    font-size: 14px;
+}
+
+/* تعداد کلاینت‌ها */
+.clients-total {
+    margin-top: 20px;
+    background: rgba(255,255,255,0.9);
+    backdrop-filter: blur(10px);
+    padding: 8px 20px;
+    border-radius: 40px;
+    font-size: 14px;
+    color: #2d3748;
+    font-weight: 600;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+/* انیمیشن */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ======================================== */
+/* RESPONSIVE DESIGN (ریسپانسیو برای موبایل) */
+/* ======================================== */
+
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    .titl {
+        font-size: 1.5rem;
+        margin-bottom: 15px;
+    }
+
+    .main {
+        border-radius: 20px;
+    }
+
+    .name {
+        padding: 12px 16px;
+    }
+
+    .name i {
+        font-size: 18px;
+        padding: 6px;
+    }
+
+    .name input {
+        font-size: 14px;
+        padding: 10px 14px;
+    }
+
+    .message-container {
+        height: 400px;
+        padding: 15px;
+    }
+
+    .message-left,
+    .message-right {
+        max-width: 85%;
+        padding: 10px 14px;
+    }
+
+    .message-left .message,
+    .message-right .message {
+        font-size: 14px;
+    }
+
+    .message-form {
+        padding: 10px 15px;
+        gap: 8px;
+    }
+
+    .message-input {
+        padding: 10px 14px;
+        font-size: 14px;
+    }
+
+    .send-btn {
+        padding: 8px 18px;
+        font-size: 13px;
+    }
+
+    .clients-total {
+        font-size: 12px;
+        padding: 6px 16px;
+        margin-top: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .message-left,
+    .message-right {
+        max-width: 90%;
+    }
+
+    .message-form {
+        flex-wrap: wrap;
+    }
+
+    .v-divider {
+        display: none;
+    }
+
+    .send-btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .message-input {
+        width: 100%;
+    }
+}

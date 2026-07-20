@@ -363,3 +363,156 @@ body {
 a:hover {
   color: #ffffff;
 }
+/* ------------------------------------------------------- */
+
+.main {
+  display: flex;
+  gap: 16px;
+  align-items: stretch;
+}
+
+.groups-sidebar {
+  width: 280px;
+  background: #f3f4f6;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 16px;
+  height: 500px;
+  overflow-y: auto;
+}
+
+.groups-sidebar h3 {
+  margin: 0 0 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.group-create {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 12px;
+}
+
+.group-create input {
+  flex: 1;
+  padding: 6px 8px;
+  border: 1px solid #bbb;
+  border-radius: 4px;
+}
+
+.group-create button {
+  padding: 6px 10px;
+  background: #4f46e5;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.active-group-box {
+  margin-bottom: 14px;
+}
+
+.active-group-box select {
+  width: 100%;
+  padding: 6px;
+  border: 1px solid #bbb;
+  border-radius: 4px;
+}
+
+.groups-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.groups-list li {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+  padding: 8px 10px;
+  margin-bottom: 8px;
+}
+
+.group-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 6px;
+}
+
+.group-actions {
+  display: flex;
+  gap: 6px;
+}
+
+.group-actions button {
+  flex: 1;
+  padding: 4px 6px;
+  font-size: 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.join-btn  { background: #10b981; color: white; }
+.leave-btn { background: #ef4444; color: white; }
+.enter-btn { background: #3b82f6; color: white; }
+
+.chat-wrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+
+
+
+
+/* استایل دکمه انتخاب فایل */
+.file-btn {
+  cursor: pointer;
+  padding: 0 12px;
+  display: flex;
+  align-items: center;
+  color: #666;
+  font-size: 18px;
+  transition: color 0.2s;
+}
+.file-btn:hover {
+  color: #4f46e5;
+}
+
+/* استایل عکس‌های ارسال شده در چت */
+.chat-image {
+  max-width: 100%;
+  max-height: 250px;
+  border-radius: 8px;
+  margin-bottom: 5px;
+  display: block;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+.chat-image:hover {
+  transform: scale(1.02);
+}
+
+/* استایل لینک دانلود فایل‌ها (PDF, ZIP و...) */
+.file-download {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #e5e7eb;
+  color: #1f2937;
+  padding: 10px 14px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+  margin-bottom: 5px;
+  width: fit-content;
+  transition: background 0.2s;
+}
+.file-download:hover {
+  background: #d1d5db;
+}

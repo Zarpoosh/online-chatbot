@@ -38,7 +38,7 @@ chat-application/
 ├── public/ # Client-side files
 │ ├── index.html # Main chat page
 │ ├── main.css # Styles
-│ ├── main2.js # Client logic (socket connection)
+│ ├── client.js # Client logic (socket connection)
 │ └── voice.mp3 # Notification sound
 │
 ├── server.js # Express + Socket.IO server

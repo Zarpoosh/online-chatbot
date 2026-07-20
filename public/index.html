@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fa" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,42 +10,54 @@
 </head>
 <body>
     <div class="titl">My chat </div>
+
     <div class="main">
-        <div class="name">
-            
-            <i class="fa-solid fa-user"></i>
-            <input type="text" id="name" class="name" value="anonymouse">
-        </div>
-        <div class="chat-area">
-            <ul class="message-container" id="message-container">
-                <li class="message-left">
-                    <p class="message">test message</p>
-                    <span>me . 25 july 10:30</span>
-                </li>
+        <aside class="groups-sidebar">
+            <h3><i class="fa-solid fa-users"></i> گروه‌های کاری</h3>
+            <div class="group-create">
+                <input type="text" id="new-group-name" placeholder="نام گروه جدید">
+                <button id="create-group-btn"><i class="fa-solid fa-plus"></i> ساخت</button>
+            </div>
+            <div class="active-group-box">
+                <label>گروه فعال:</label>
+                <select id="active-group-select">
+                    <option value="">گلوبال (عمومی)</option>
+                </select>
+            </div>
+            <ul id="groups-list" class="groups-list"></ul>
+        </aside>
 
-                <li class="message-right">
-                    <p class="message">test message</p>
-                    <span>me . 25 july 10:30</span>
-                </li>
-                <li class="message-feedback">
-                    <p class="feedback">ali is typing...</p>
-                </li>
-            </ul>
+        <div class="chat-wrapper">
+            <div class="name">
+                <i class="fa-solid fa-user"></i>
+                <input type="text" id="name" class="name" value="anonymouse">
+            </div>
 
-            <form class="message-form" id="message-form">
-                <input type="text" name="message" id="message" class="message-input">
-                <div class="v-divider"></div>
-                <button type="submit" class="send-btn" >send 
-                    <i class="fa-solid fa-paper-plane"></i>
-                </button>
-            </form>
+            <div class="chat-area">
+                <ul class="message-container" id="message-container"></ul>
+
+                <form class="message-form" id="message-form">
+                    <!-- دکمه انتخاب فایل -->
+                    <label for="file-input" class="file-btn" title="ارسال فایل">
+                        <i class="fa-solid fa-paperclip"></i>
+                    </label>
+                    <input type="file" id="file-input" hidden>
+                    
+                    <input type="text" name="message" id="message" class="message-input" placeholder="پیام خود را بنویسید...">
+                    <div class="v-divider"></div>
+                    <button type="submit" class="send-btn">send
+                        <i class="fa-solid fa-paper-plane"></i>
+                    </button>
+                </form>
+            </div>
         </div>
     </div>
-    <h3 class="clients-total" id="clients-total" >total clients :0</h3>
+
+    <h3 class="clients-total" id="clients-total">total clients :0</h3>
     <a class="git-link" href="git@github.com:Zarpoosh/Localhost-Messenger.git">github link :)</a>
 
     <script src="/socket.io/socket.io.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.30.1/moment.min.js"></script>
-    <script src="main2.js"></script>
+    <script src="client.js"></script>
 </body>
 </html>
